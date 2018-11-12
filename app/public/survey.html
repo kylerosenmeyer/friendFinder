@@ -5,11 +5,120 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>FF Survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!--CSS Resources-->
+    <link rel="stylesheet" type="text/css" href="reset.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 
 </head>
 <body>
     
+    <div class="container">
+        <form>
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                <div class="col-sm-1-12">
+                    <p>Name (Required)</p>
+                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Clark Kent">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                <div class="col-sm-1-12">
+                    <p>Photo (Required)</p>
+                    <input type="url" class="form-control" name="inputPhoto" id="inputPhoto" placeholder="Paste URL Here">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                <div class="col-sm-1-12">
+                    <p>Question 1</p>
+                    <input type="range" class="form-control" name="inputQ1" id="inputQ1" placeholder="Q1">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                <div class="col-sm-1-12">
+                    <p>Question 2</p>
+                    <input type="range" class="form-control" name="inputQ2" id="inputQ2" placeholder="Q2">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                <div class="col-sm-1-12">
+                    <p>Question 3</p>
+                    <input type="range" class="form-control" name="inputQ3" id="inputQ3" placeholder="Q3">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                <div class="col-sm-1-12">
+                    <p>Question 4</p>
+                    <input type="range" class="form-control" name="inputQ4" id="inputQ4" placeholder="Q4">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                <div class="col-sm-1-12">
+                    <p>Question 5</p>
+                    <input type="range" class="form-control" name="inputQ5" id="inputQ5" placeholder="Q5">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                <div class="col-sm-1-12">
+                    <p>Question 6</p>
+                    <input type="range" class="form-control" name="inputQ6" id="inputQ6" placeholder="Q6">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                <div class="col-sm-1-12">
+                    <p>Question 7</p>
+                    <input type="range" class="form-control" name="inputQ7" id="inputQ7" placeholder="Q7">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                <div class="col-sm-1-12">
+                    <p>Question 8</p>
+                    <input type="range" class="form-control" name="inputQ8" id="inputQ8" placeholder="Q8">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                <div class="col-sm-1-12">
+                    <p>Question 9</p>
+                    <input type="range" class="form-control" name="inputQ9" id="inputQ9" placeholder="Q9">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                <div class="col-sm-1-12">
+                    <p>Question 10</p>
+                    <input type="range" class="form-control" name="inputQ10" id="inputQ10" placeholder="Q10">
+                </div>
+            </div>
+           
+            <div class="form-group row">
+                <div class="offset-sm-2 col-sm-10">
+                    <button type="button" class="btn btn-primary" id="submitSurvey">Find Your Match</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
 
 
@@ -17,5 +126,47 @@
 
 
     <!--JS Resources-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <!--In Line jQuery used to handle the submit click event and hit the POST route in apiRoutes.js-->
+    <script>
+    
+    $("#submitSurvey").click( function(event) {
+
+        event.preventDefault()
+
+        let name = $("#inputName").val().trim(),
+            photo = $("#inputPhoto").val().trim(),
+            q1 = $("#inputQ1").val(),
+            q2 = $("#inputQ2").val(),
+            q3 = $("#inputQ3").val(),
+            q4 = $("#inputQ4").val(),
+            q5 = $("#inputQ5").val(),
+            q6 = $("#inputQ6").val(),
+            q7 = $("#inputQ7").val(),
+            q8 = $("#inputQ8").val(),
+            q9 = $("#inputQ9").val(),
+            q10 = $("#inputQ10").val()
+
+        let newScore = []
+
+        newScore.push(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10)
+
+        let newFriend = {
+            name: name,
+            photo: photo,
+            score: newScore
+        }
+
+        console.log("This is your profile: \n", newFriend)
+
+        $.post("/api/friends", newFriend)
+            .then( function() {
+                console.log("Profile Add to the Friend Finder!")
+            })
+
+
+        })
+</script>
 </body>
 </html>
