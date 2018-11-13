@@ -11,7 +11,7 @@ module.exports = function(app) {
 
     app.use(express.static(path.join(__dirname, "../public")))
 
-    //Home Page
+    //*Home Page
     app.get("/", function(req, res) {
 
         res.sendFile(path.join(__dirname,"../public", "home.html"))
@@ -24,11 +24,12 @@ module.exports = function(app) {
 
         if ( catchAll === "survey" ) {
 
-            
+            //Serve the survey.html page if the route is /survey
             res.sendFile(path.join(__dirname,"../public", "survey.html"))
             
         } else if ( catchAll !== "api/friends" ) {
 
+            //Serve the home.html page if the route is anyting else (except api/friends)
             res.sendFile(path.join(__dirname,"../public", "home.html"))
         }
     })
