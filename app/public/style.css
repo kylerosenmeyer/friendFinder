@@ -1,7 +1,10 @@
 body {
-    background-color: grey; 
+    background-color: #2d3e5e;
+    height: 1000%;
+    width: 100%;
     text-align: center;
     font-family: 'Dancing Script', cursive;
+    color: rgb(224, 224, 224)
 }
 
 h1 {
@@ -11,6 +14,33 @@ h1 {
 h2 {
     font-family: 'Acme', sans-serif;
 }
+
+input, .form-control {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.qpercent {
+    text-emphasis: bold;
+}
+
+.left, .right, .qPercent {
+    display: inline-block;
+    font-size: 1.3em;
+}
+
+
+
+
 
 .landing-page {
     height: 100%;
@@ -28,6 +58,12 @@ h2 {
 #matchPhoto {
     width: 100%;
     height: auto;
+}
+
+#userPhoto {
+    width: 300px;
+    height: auto;
+    margin: 5px auto;
 }
 
 

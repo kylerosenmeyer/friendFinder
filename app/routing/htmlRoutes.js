@@ -24,6 +24,7 @@ module.exports = function(app) {
 
         if ( catchAll === "survey" ) {
 
+            
             //Serve the survey.html page if the route is /survey
             res.sendFile(path.join(__dirname,"../public", "survey.html"))
             

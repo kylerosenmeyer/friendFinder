@@ -1,0 +1,72 @@
+input[type="range"] { 
+    margin: auto;
+    -webkit-appearance: none;
+    position: relative;
+    overflow: hidden;
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0; /* iOS */
+}
+
+::-webkit-slider-runnable-track {
+    background: transparent;
+}
+
+/*
+ * 1. Set to 0 width and remove border for a slider without a thumb
+ */
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; /* 1 */
+    height: 40px;
+    background: darkblue;
+    box-shadow: none;
+    border: none;
+}
+
+::-moz-range-track {
+    height: 2px;
+    background: transparent;
+}
+
+::-moz-range-thumb {
+    background: darkblue;
+    height: 40px;
+    width: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+::-ms-fill-lower { 
+    background: goldenrod;
+}
+
+::-ms-thumb { 
+    background: darkblue;
+    border: none;
+    height: 40px;
+    width: 20px;
+    box-sizing: border-box;
+}
+
+::-ms-ticks-after { 
+    display: none; 
+}
+
+::-ms-ticks-before { 
+    display: none; 
+}
+
+::-ms-track { 
+    background: transparent;
+    color: transparent;
+    height: 2px;
+    border: none;
+}
+
+::-ms-tooltip { 
+    display: none;
+}
