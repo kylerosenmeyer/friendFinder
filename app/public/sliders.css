@@ -40,7 +40,7 @@ input[type="range"]:focus {
     background: #5579bd;
     border-color: rgb(255,255,255);
     border-radius: 20px;
-    box-shadow: -50vw 0 0 48vw rgb(255,255,255);
+    box-shadow: -50vw 0 0 48.5vw rgb(255,255,255);
     border: 5px solid rgb(255,255,255); /* 1 */
     outline: none;
 }
@@ -114,4 +114,18 @@ input[type="range"]:focus {
 
 ::-ms-tooltip { 
     display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    ::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 40px; /* 1 */
+        height: 40px;
+        background: #5579bd;
+        border-color: rgb(255,255,255);
+        border-radius: 20px;
+        box-shadow: -50vw 0 0 48vw rgb(255,255,255);
+        border: 5px solid rgb(255,255,255); /* 1 */
+        outline: none;
+    }
 }
