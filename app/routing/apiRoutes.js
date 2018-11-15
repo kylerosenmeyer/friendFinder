@@ -79,8 +79,8 @@ module.exports = function(app) {
                 // console.log("Perfect Friend: ", perfectName)
                 // console.log("Perfect Photo: ", perfectPhoto)
                 
-                //Push the best friend match into the pFriend[] array, which will be available to survey.html.
-                friends.pFriend.push(perfectFriend)
+                //Put the best friend match into the front of the pFriend[] array, which will be available to survey.html.
+                friends.pFriend.unshift(perfectFriend)
             }
         } 
     })
