@@ -1,10 +1,10 @@
 body {
-    background-color: #2d3e5e;
+    background-color: #5579bd;
     height: 1000%;
     width: 100%;
     text-align: center;
     font-family: 'Dancing Script', cursive;
-    color: rgb(224, 224, 224)
+    color: rgb(255,255,255)
 }
 
 h1 {
@@ -19,6 +19,33 @@ input, .form-control {
     width: 100%;
     margin: 10px auto;
     text-align: center;
+    border-radius: 20px;
+}
+
+button, .btn {
+    border-radius: 20px;
+    background-color: #5579bd;
+    border: 3px solid rgb(255,255,255);
+    padding: 5px 20px;
+    color: rgb(255, 255, 255);
+}
+
+button:hover, .btn:hover {
+    background-color: rgb(255,255,255);
+    color: #5579bd;
+    text-emphasis: bold;
+}
+
+input, .form-control, button:focus, .btn:focus {
+    outline: none;
+}
+
+input, .form-control, button:active, .btn:active {
+    outline: none;
+}
+
+.row {
+    margin: 40px 0px;
 }
 
 .left {
@@ -38,26 +65,32 @@ input, .form-control {
     font-size: 1.3em;
 }
 
-
-
-
-
 .landing-page {
     height: 100%;
     width: 100%;
     margin: auto;
-    padding-top: 12%;
+    padding-top: -10%;
+}
+
+.lead {
+    font-size: 1.5em;
 }
 
 #logo {
     font-size: 100px;
     height: 100px;
-    color: black;
+    color: rgb(255,255,255);
+}
+
+#matchName {
+    color: #5579bd;
 }
 
 #matchPhoto {
-    width: 100%;
+    width: 95%;
     height: auto;
+    margin: auto;
+    border: 10px solid #5579bd;
 }
 
 #userPhoto {
@@ -66,6 +99,24 @@ input, .form-control {
     margin: 5px auto;
 }
 
+.modal-title {
+    color: #5579bd;
+    text-emphasis: bolder;
+}
+
+.btn-modal {
+    border-radius: 20px;
+    background-color: rgb(255,255,255);
+    border: 3px solid #5579bd;
+    padding: 5px 20px;
+    color: #5579bd;
+}
+
+.btn-modal:hover {
+    background-color: #5579bd;
+    color: rgb(255,255,255);
+    text-emphasis: bold;
+}
 
 /*Modal Styling Fix. I did not write this code. Source: https://github.com/shlomiassaf/ngx-modialog/issues/280 */
 .fade.in {

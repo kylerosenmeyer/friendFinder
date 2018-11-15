@@ -1,3 +1,6 @@
+/*I did not write this code. Only changed values for appearance.*/
+/*From Noah Blon: https://codepen.io/noahblon/pen/OyajvN*/
+
 input[type="range"] { 
     margin: auto;
     -webkit-appearance: none;
@@ -5,12 +8,26 @@ input[type="range"] {
     overflow: hidden;
     height: 40px;
     width: 100%;
+    border-radius: 20px;
     cursor: pointer;
-    border-radius: 0; /* iOS */
+}
+
+input[type="range"]:active {
+    outline: none;
+}
+
+input[type="range"]:focus {
+    outline: none;
 }
 
 ::-webkit-slider-runnable-track {
-    background: transparent;
+    background: #5579bd;
+    border-radius: 10px;
+    border-color: #5579bd;
+}
+
+::-webkit-slider-runnable-track:active {
+    outline: none;
 }
 
 /*
@@ -18,38 +35,62 @@ input[type="range"] {
  */
 ::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 20px; /* 1 */
+    width: 40px; /* 1 */
     height: 40px;
-    background: darkblue;
-    box-shadow: none;
-    border: none;
+    background: #5579bd;
+    border-color: rgb(255,255,255);
+    border-radius: 20px;
+    box-shadow: -50vw 0 0 48vw rgb(255,255,255);
+    border: 5px solid rgb(255,255,255); /* 1 */
+    outline: none;
+}
+
+::-webkit-slider-thumb:active {
+    outline: none;
 }
 
 ::-moz-range-track {
-    height: 2px;
-    background: transparent;
+    height: 5px;
+    background: #5579bd;
+}
+
+::-webkit-range-track:active {
+    outline: none;
 }
 
 ::-moz-range-thumb {
-    background: darkblue;
+    background: rgb(255,255,255);
     height: 40px;
-    width: 20px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: none;
+    width: 40px;
+    border: 10px solid rgb(255,255,255);
+    border-radius: 20px;
+    box-shadow: -100vw 0 0 100vw rgb(255,255,255);
     box-sizing: border-box;
+}
+
+::-moz-range-thumb:active {
+    outline: none;
 }
 
 ::-ms-fill-lower { 
-    background: goldenrod;
+    background: #5579bd;
+}
+
+::-ms-fill-lower:active {
+    outline: none;
 }
 
 ::-ms-thumb { 
-    background: darkblue;
-    border: none;
+    background: rgb(255,255,255);
+    border: 10px solid rgb(255,255,255);
     height: 40px;
-    width: 20px;
+    width: 40px;
+    border-radius: 20px;
     box-sizing: border-box;
+}
+
+::-ms-thumb:active {
+    outline: none;
 }
 
 ::-ms-ticks-after { 
@@ -61,10 +102,14 @@ input[type="range"] {
 }
 
 ::-ms-track { 
-    background: transparent;
+    background: #5579bd;
     color: transparent;
-    height: 2px;
+    height: 40px;
     border: none;
+}
+
+::-ms-track:active {
+    outline: none;
 }
 
 ::-ms-tooltip { 

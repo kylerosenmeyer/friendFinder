@@ -56,8 +56,8 @@ $("#submitSurvey").click( function(event) {
             if ( data.pFriend.length !== 0 ) {
 
                 //Attach the information to id's on this page, and trigger the modal.
-                $("#matchName").text(perfectFriend.perfectName)
-                $("#matchPhoto").attr("src", perfectFriend.perfectPhoto)
+                $("#matchName").text(data.pFriend[0].perfectName)
+                $("#matchPhoto").attr("src", data.pFriend[0].perfectPhoto)
                 $("#perfectMatchModal").modal("toggle")
             } else {
                 $("#noMatchModal").modal("toggle")
@@ -69,14 +69,27 @@ $("#submitSurvey").click( function(event) {
 
 $("#submitName").click( function() {
 
-    $(".row2").fadeIn(1000)
+    let nameCheck = $("#inputName").val().trim()
+
+    if ( nameCheck !== "" ) {
+
+        $(".row2").fadeIn(1000)
+    } 
 })
 
 $("#submitPhoto").click( function() {
 
     let photoUrl = $("#inputPhoto").val().trim()
-    $("#userPhoto").attr("src", photoUrl)
-    $(".row3").fadeIn(1000)
+
+    if ( photoUrl !== "" ) {
+
+        $("#userPhoto").attr("src", photoUrl)
+        $("#userPhoto").css({
+            "border": "10px solid #5579bd",
+            "outline": "10px solid rgb(255,255,255)"
+        })
+        $(".row3").fadeIn(1000)
+    }  
 })
 
 //Listen for the user to click and drag the slider for Question 1.
@@ -199,6 +212,10 @@ $("#tryAgain, #nextFriend").click( function() {
 
     document.getElementById("friendSurvey").reset()
     $("#userPhoto").attr("src", "")
+    $("#userPhoto").css({
+        "border": "none",
+        "outline": "none"
+    })
     $(".row1").fadeIn(1000)
 })
 
