@@ -1,6 +1,8 @@
 //*Survey.html javascript lives here.
 
-$(".row2, .row3, .row4, .row5, .row6, .row7, .row8, .row9, .row10, .row11, .row12, .row13").fadeOut(0)
+$(".row2, .row3, .row4, .row5, .row6, .row7, .row8, .row9, .row10, .row11, .row12, .row13").css({
+    display: "initial"
+}).fadeOut(0)
 
 //The submitSurvey event grabs all the data from the user's entry, posts it to /api/friends for processing, and grabs the resulting match.
 $("#submitSurvey").click( function(event) {
