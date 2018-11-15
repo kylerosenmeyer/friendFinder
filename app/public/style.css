@@ -122,6 +122,10 @@ input, .form-control, button:active, .btn:active {
     display: none;
 }
 
+.row13 {
+    padding: 50px 0px;
+}
+
 /*Modal Styling Fix. I did not write this code. Source: https://github.com/shlomiassaf/ngx-modialog/issues/280 */
 .fade.in {
     opacity: 1;
