@@ -135,38 +135,4 @@ input, .form-control, button:active, .btn:active {
 }
 
 
-@media only screen and (max-width: 850px) {
-
-    .landing-page {
-        padding-top: 15%;
-    }
-}
-
-@media only screen and (max-width: 760px) {
-
-    .landing-page {
-        padding-top: 18%;
-    }
-}
-
-@media only screen and (max-width: 640px) {
-
-    .landing-page {
-        padding-top: 20%;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-
-    .landing-page {
-        padding-top: 25%;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-
-    .landing-page {
-        padding-top: 30%;
-    }
-}
 
