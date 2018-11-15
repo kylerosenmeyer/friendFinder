@@ -27,7 +27,7 @@ if ( window.innerWidth > 1000 ) {
         {
             transformOrigin: "100% 100%",
             ease: Bounce.easeOut, 
-            yPercent: 10,
+            yPercent: 20,
             skewY: -2,
             xPercent: -1.0
         }
