@@ -124,7 +124,7 @@ input[type="range"]:focus {
         background: #5579bd;
         border-color: rgb(255,255,255);
         border-radius: 20px;
-        box-shadow: -50vw 0 0 47.5vw rgb(255,255,255);
+        box-shadow: -50vw 0 0 47vw rgb(255,255,255);
         border: 5px solid rgb(255,255,255); /* 1 */
         outline: none;
     }
