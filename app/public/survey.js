@@ -219,6 +219,7 @@ $("#tryAgain, #nextFriend").click( function() {
         "outline": "none"
     })
     $(".row1").fadeIn(1000)
+    $("#q1percent, #q2percent, #q3percent, #q4percent, #q5percent, #q6percent, #q7percent, #q8percent, #q9percent, #q10percent").html("50%")
 })
 
 
